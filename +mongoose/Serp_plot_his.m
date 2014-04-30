@@ -32,6 +32,8 @@ function output = Serp_plot_his(prefix,man,opt)
 %% Initialize flags and counters:
 done = 0;
 
+import mongoose.*
+
 %% Check variables:
 %   This checks if variable exist and sets to default if they do not.
 if isfield(opt,'save_dir') == 0

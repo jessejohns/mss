@@ -41,6 +41,8 @@ if isfield(opt,'err') == 0
     opt.err = 0;
 end
 
+import mongoose.*
+
 %% Set up directory:
 if man == 2;
     fold = build_dir(prefix);
