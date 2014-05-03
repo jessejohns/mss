@@ -1,4 +1,4 @@
-% function Serp_stat_test(prefix,man,type,error_tol)
+function Serp_stat_test(prefix,data_dir,man,error_tol,inc_er)
 %
 %  This function runs through all parameters in a Serpent 1 or 2
 %  result file and prints a files with statistical test results
@@ -21,14 +21,14 @@
 %   jesse.m.johns@gmail.com
 %
 %% Testing inputs:
-clear; clc; close all
+% clear; clc; close all
+%
+% prefix = 'VVER';
+% man = 2;
+% error_tol = .05;
+% inc_er = 0;
 
-prefix = 'VVER';
-man = 2;
-error_tol = .05;
-inc_er = 0;
-
-data_dir = 'Results';
+% data_dir = 'Results';
 
 %%  Documentation:
 %
