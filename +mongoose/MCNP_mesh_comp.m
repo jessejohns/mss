@@ -1,6 +1,5 @@
-% clear; clc; 
-% function MCNP_mesh_comp(fold1, fileID1, fold2, fileID2 loc, ene)
-%% MCNP_mesh(fold, fileID, loc)
+function MCNP_mesh_comp(fold1, fileID1, fold2, fileID2 loc, ene)
+%%CNP_mesh_comp(fold1, fileID1, fold2, fileID2 loc, ene)
 %
 %  This function plots an MCNP5 'meshtal' file in the 'col' format.  The
 %  slice function is used to plot the slices at their maximum x, y, and z
@@ -19,15 +18,15 @@
 %  ene, if there are more than 1, this indexes which energy interval to
 %       plot.
 %
-%
-fold1 = 'C:\Users\Jesse\Dropbox\Work\NSC\MCNP\Output\Beamport';
-fileID1 = 'TC_tube_mesh';
-ene = 1;
+%% Testing variables:
+% fold1 = 'C:\Users\Jesse\Dropbox\Work\NSC\MCNP\Output\Beamport';
+% fileID1 = 'TC_tube_mesh';
+% ene = 1;
 
-fold2 = 'C:\Users\Jesse\Dropbox\Work\NSC\MCNP\Output\Beamport';
-fileID2 = 'TC_layer_mesh';
+% fold2 = 'C:\Users\Jesse\Dropbox\Work\NSC\MCNP\Output\Beamport';
+% fileID2 = 'TC_layer_mesh';
 
-loc = [10 60; 132.5 132.5; 45 45];
+% loc = [10 60; 132.5 132.5; 45 45];
 
 %% NOTES:
 %  This so far only handles 1 mesh in the meshtal input.
