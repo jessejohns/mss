@@ -1,5 +1,4 @@
-% clear; clc; 
-% function MCNP_mesh(fold, fileID, loc, ene)
+function MCNP_mesh(fold, fileID, loc, ene)
 %% MCNP_mesh(fold, fileID, loc)
 %
 %  This function plots an MCNP5 'meshtal' file in the 'col' format.  The
@@ -19,10 +18,10 @@
 %  ene, if there are more than 1, this indexes which energy interval to
 %       plot.
 %
-%
-fold = '/home/jesse/Simulations';
-fileID = 'meshtal';
-ene = 1;
+%% Testing variables:
+% fold = '/home/jesse/Simulations';
+% fileID = 'meshtal';
+% ene = 1;
 
 %% NOTES:
 %  This so can only handle 1 mesh in the meshtal input.
