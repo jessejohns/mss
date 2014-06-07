@@ -27,3 +27,11 @@ MCNP_iterator.m   - function require of MCNP_critsearch.m to perfrom the search
 MCNP_mesh.m       - extracts and plots mesh data
 MCNP_mesh_comp.m  - compares two meshes
 Serp_check.m      - statistical checks on Serpent output
+Serp_ext_data.m   - Extracts data based on "opt" data structure parameters.
+Serp_ext_det.m    - Extracts detector data.
+Serp_ext_mat.m    - Extracts material data from depletion calculations.
+Serp_iterator.m   - Iterates on a parameters for some conditions.
+Serp_plot_data.m  - Quick plotting script that uses _ext_data.m.
+Serp_plot_det.m   - " ... _ext_det.m
+Serp_plot_his.m   - Plots keff histories if his option is used.
+Serp_plot_mat.m   - Quick plotting script that uses _ext_mat.m.  Also contains benchmark data for Takahama-3.
