@@ -83,21 +83,28 @@ for i = 1:length(fold)
         %         error('Number of detectors is not equal to the opt.err input. \n')
         %     end
         
-        for i = 1:length(res.value)
-            if max(max(res.value{1,1})) ~= 0
-                figure
-                surf(res.array{i,1},res.array{i,2},res.value{i,1})
-                view(0,90)
-                
-                shading flat
-                colorbar
-                
-                figure
-                surf(res.array{i,1},res.array{i,2},res.err{i,1})
-                view(0,90)
-                
-                shading flat
-                colorbar
+        if res.flag{j} == 2
+            
+            semilogx(res.array{:,1},res.value{:,1});
+            
+        elseif res.flag{j} == 3
+            
+            for i = 1:length(res.value)
+                if max(max(res.value{1,1})) ~= 0
+                    figure
+                    surf(res.array{i,1},res.array{i,2},res.value{i,1})
+                    view(0,90)
+                    
+                    shading flat
+                    colorbar
+                    
+                    figure
+                    surf(res.array{i,1},res.array{i,2},res.err{i,1})
+                    view(0,90)
+                    
+                    shading flat
+                    colorbar
+                end
             end
         end
         
