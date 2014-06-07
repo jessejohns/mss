@@ -21,13 +21,9 @@ Functionality
 ========
 
 MCNP_critsearch.m - performs a criticality search on the string "free_parameter" in an input deck.
-
 MCNP_extrat.m     - extracts tally data
-
 MCNP_find_k.m     - extracts the eigenvalue
-
 MCNP_iterator.m   - function require of MCNP_critsearch.m to perfrom the search
-
 MCNP_mesh.m       - extracts and plots mesh data
 
 MCNP_mesh_comp.m  - compares two meshes
