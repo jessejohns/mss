@@ -40,6 +40,6 @@ Serp_search_det.m - Finds all detector files and builds them into a data structu
 Serp_search_res.m - Automatically finds _res.m file in a directory.
 Serp_search_his.m - " ... _his.m ... "
 Serp_search_res.m - " ... _res.m ... "
-Serp_unc_data.m   -
-Serp_unc_mat.m
-build_dir.m       - 
+Serp_unc_data.m   - Plots data uncertainties for a burnup convergence study.
+Serp_unc_mat.m    - Plots material uncertainties for a burnup convergence study.
+build_dir.m       - Build directory of input cases.
