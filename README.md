@@ -35,3 +35,11 @@ Serp_plot_data.m  - Quick plotting script that uses _ext_data.m.
 Serp_plot_det.m   - " ... _ext_det.m
 Serp_plot_his.m   - Plots keff histories if his option is used.
 Serp_plot_mat.m   - Quick plotting script that uses _ext_mat.m.  Also contains benchmark data for Takahama-3.
+Serp_search_dep.m - Automatically finds _dep.m file in a directory - so one doesn't need the file name.
+Serp_search_det.m - Finds all detector files and builds them into a data structure - useful for depletion cases.
+Serp_search_res.m - Automatically finds _res.m file in a directory.
+Serp_search_his.m - " ... _his.m ... "
+Serp_search_res.m - " ... _res.m ... "
+Serp_unc_data.m   -
+Serp_unc_mat.m
+build_dir.m       - 
