@@ -43,3 +43,4 @@ Serp_search_res.m - " ... _res.m ... "
 Serp_unc_data.m   - Plots data uncertainties for a burnup convergence study.
 Serp_unc_mat.m    - Plots material uncertainties for a burnup convergence study.
 build_dir.m       - Build directory of input cases.
+readCellFoam.m    - Reads the polyMesh/cellZones and generates a corresponding material file
