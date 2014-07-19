@@ -15,6 +15,7 @@ function readCellFOAM(ID,opt)
 %% Test inputs:
 % ID = 'cellZones';
 % opt.mat = {'fuel' 'mod'};
+% opt.rho = [10.421 0.989];
 
 %% Check inputs:
 if isfield(opt,'mat') == 0
@@ -81,12 +82,14 @@ while ischar(in_line);
                 arrayLength = str2double(in_line);
                 
                 G{k}.arrayLength = arrayLength;
-                G{k}.index = zeros(arrayLength-1,1);
+                G{k}.index = zeros(arrayLength,1);
                 
                 in_line = fgetl(od);
-                in_line = fgetl(od);
                 
-                for i = 1:arrayLength-1
+                % OpenFOAM indicies start with zero, since MATLAB uses 1
+                % for the first index, we need to increase it by 1.
+                
+                for i = 1:arrayLength
                     in_line = fgetl(od);
                     G{k}.index(i) = str2double(in_line)+1;
                 end
@@ -104,6 +107,8 @@ end
 fclose(od);
 
 %% Write material:
+%
+%  G{i} is the set of indicies for region i.
 
 tot_cell = 0;
 
@@ -115,9 +120,12 @@ end
 
 for i = 1:num_cell
    
-    for j = 1:G{i}.arrayLength-1
+    for j = 1:G{i}.arrayLength
        
-        bigIDX{G{i}.index(j)} = opt.mat{i};
+        bigMAT{G{i}.index(j)} = opt.mat{i};
+        bigIDX{G{i}.index(j)} = j;
+        bigRHO{G{i}.index(j)} = opt.rho(i);
+        bigTMP{G{i}.index(j)} = 300;
         
     end
 end
@@ -126,10 +134,43 @@ end
 delete materials
 
 diary materials
-fprintf('%i\n',tot_cell)
+fprintf('%i\n',tot_cell);
+
+for i = 1:length(bigMAT);
+    fprintf('%s\n',bigMAT{i});
+end
+diary off
+
+%% Write mapping
+delete map
+
+diary map
+fprintf('%i\n',tot_cell);
 
 for i = 1:length(bigIDX)
-    fprintf('%s\n',bigIDX{i})
+    fprintf('%i\n',bigIDX{i});
+end
+diary off
+
+%% Write temperature and density:
+cd ../../0
+
+delete T
+delete rho
+
+diary T
+fprintf('%i\n',tot_cell);
+
+for i = 1:length(bigTMP);
+    fprintf('%i\n',bigTMP{i});
+end
+diary off
+
+diary rho
+fprintf('%i\n',tot_cell);
+
+for i = 1:length(bigRHO);
+    fprintf('%i\n',bigRHO{i});
 end
 diary off
 
