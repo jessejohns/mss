@@ -32,7 +32,7 @@ done = 0;
 count_run = 0;
 ind = 0;
 
-import mongoose.*
+import mss.*
 
 %% Check variables:
 %   This checks if variable exist and sets to default if they do not.

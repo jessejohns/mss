@@ -41,7 +41,7 @@ if isfield(opt,'err') == 0
     opt.err = 0;
 end
 
-import mongoose.*
+import mss.*
 
 %% Set up directory:
 if man == 2;

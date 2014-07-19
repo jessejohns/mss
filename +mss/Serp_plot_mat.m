@@ -62,7 +62,7 @@ function Serp_plot_mat(prefix, man,opt)
 %    be made within the script. - Add an option??
 %  Add an option to plot in a subplot select isotopes.
 
-import mongoose.*
+import mss.*
 
 %% Checks
 

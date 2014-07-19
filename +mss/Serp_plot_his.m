@@ -32,7 +32,7 @@ function output = Serp_plot_his(prefix,man,opt)
 %% Initialize flags and counters:
 done = 0;
 
-import mongoose.*
+import mss.*
 
 %% Check variables:
 %   This checks if variable exist and sets to default if they do not.
